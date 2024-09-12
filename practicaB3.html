@@ -8,10 +8,7 @@
 <link rel="preload" href="https://e00.uecdn.es/fonts/roboto/RobotoCondensed-Bold.woff2" as="font" type="font/woff2" crossorigin="">
 <link rel="stylesheet" type="text/css" href="https://e00-mx-marca.uecdn.es/mx/assets/cover/marcamexico/v0/main-cover.b071d396742cf270b895.css">
 <script type="text/javascript" src="https://e00-mx-marca.uecdn.es/mx/assets/v33/js/jquery.2.2.1.js"></script><script id="jsCritical">
-    function getSdkDidomi() {
-        window.gdprAppliesGlobally=!0,function(){var t,e;(function t(e,a,r,n,c){function i(t,e,r,n){if("function"==typeof r){window[a]||(window[a]=[]);var i=!1;c&&(i=c(t,e,r)),i||window[a].push({command:t,parameter:e,callback:r,version:n})}}function s(t){if(window[e]&&!0===window[e].stub&&t.data){var a,c="string"==typeof t.data;try{a=c?JSON.parse(t.data):t.data}catch(i){return}if(a[r]){var s=a[r];window[e](s.command,s.parameter,function(e,a){var r={};r[n]={returnValue:e,success:a,callId:s.callId},t.source.postMessage(c?JSON.stringify(r):r,"*")},s.version)}}}i.stub=!0,"function"!=typeof window[e]&&(window[e]=i,window.addEventListener?window.addEventListener("message",s,!1):window.attachEvent("onmessage",s))})("__tcfapi","__tcfapiBuffer","__tcfapiCall","__tcfapiReturn"),setTimeout(()=>{(function t(e){if(!window.frames[e]&&document.body&&document.body.firstChild){var a=document.body,r=document.createElement("iframe");r.style.display="none",r.name=e,r.title=e,a.insertBefore(r,a.firstChild)}})("__tcfapiLocator")},5e3),(t=document.createElement("script")).id="spcloader",t.type="text/javascript",t.async=!0,t.src="https://sdk.privacy-center.org/178119d0-5586-4a4c-953e-04aaf9ac0994/loader.js?target_type=notice&target=bH6MpnRd",t.charset="utf-8",(e=document.getElementsByTagName("script")[0]).parentNode.insertBefore(t,e)}();
-    }
-    getSdkDidomi();
+   
 </script>
 
 <script src="https://www.marca.com/apw.js?v=3" defer=""></script>
@@ -397,32 +394,6 @@ if (typeof pbjs !== 'undefined') {
 		pbjs.requestBids({
 			timeout: 1000,
 			adUnitCodes: prebid_not_lazyload,
-			bidsBackHandler: function () {
-                window.didomiOnReady = window.didomiOnReady || [];
-                window.didomiOnReady.push(function(Didomi) {
-                    pbjs.setTargetingForGPTAsync();
-                    let bidsWin = pbjs.getHighestCpmBids();
-                    if (bidsWin.find(a => a.dealId == "ramkt") || bidsWin.find(a => a.dealId == "1PsYeoooYs")) {
-                        googletag.cmd.push(function() {
-                            googletag.pubads().getSlots().filter(e => e.getSizes().find(function(size) { if (size.width == 120 && size.height == 600 || size.width == 160 && size.height == 600 || size.width == 120 && size.height == 1000 || size.width == 160 && size.height == 1000 || size.width == 450 && size.height == 1000 || size.width == 120 && size.height == 1001 || size.width == 160 && size.height == 1001 || size.width == 450 && size.height == 1001) { return size } })).forEach(a => a.setTargeting('hb_deal', ['ramkt', '1PsYeoooYs']));
-                        })
-                    }
-                    initAdServer();
-                    requestManager.prebid = true;
-                    biddersBack();
-                });
-			}
-		});
-	});
-}
-}
-window.addEventListener('ue-permutive-loaded', () => {
-    window.didomiOnReady.push(() => {
-        if (window.Didomi.isConsentRequired()) {
-            initPubAds();
-            runAds();
-        }
-    });
 });class GAMExp {
 
 constructor() {
